@@ -6,11 +6,12 @@
 2. Extract the ZIP file.
 3. In VS Code, select **File → Open Folder**.
 4. Open the folder containing `main.cc`.
-5. Select **Terminal → New Terminal**.
-
-Run all commands below from the folder containing `main.cc`.
 
 ## 2. Check for a Compiler
+
+In VS Code, click **Terminal → New Terminal** from the top menu.
+
+A terminal will open at the bottom of the window. Copy the command for your system below, paste it into the terminal, and press **Enter**.
 
 ### Windows
 
@@ -30,7 +31,7 @@ If the command is not found, the compiler may be missing or its path may not be 
 
 ### Windows: If MSYS2 Is Already Installed
 
-Try:
+In the same VS Code terminal, try:
 
 ```powershell
 & "C:\msys64\ucrt64\bin\g++.exe" --version
@@ -50,15 +51,15 @@ Then go to **Step 4**. Run this path command again whenever you open a new termi
 
 1. Download the **x86_64 installer** from [MSYS2](https://www.msys2.org/).
 2. Install it in `C:\msys64`.
-3. Open **MSYS2 UCRT64** from the Start menu.
-4. Run this command in the MSYS2 window:
+3. Open **MSYS2 UCRT64** from the Windows Start menu.
+4. Paste this command into the **MSYS2 window**, then press Enter:
 
 ```bash
 pacman -S --needed base-devel mingw-w64-ucrt-x86_64-toolchain
 ```
 
 5. Press **Enter** to select all packages, then **Y** to install.
-6. After installation, return to the PowerShell terminal in VS Code and run:
+6. After installation, return to the **PowerShell terminal in VS Code** and run:
 
 ```powershell
 $env:Path = "C:\msys64\ucrt64\bin;" + $env:Path
@@ -74,19 +75,25 @@ Run the path command again whenever you open a new terminal.
 
 ### Mac
 
-Run:
+In the **VS Code terminal**, run:
 
 ```bash
 xcode-select --install
 ```
 
-Follow the installation window. Then check:
+Follow the installation window. After installation, check:
 
 ```bash
 clang++ --version
 ```
 
 ## 4. Compile and Run
+
+Use the **terminal at the bottom of VS Code**.
+
+Make sure the terminal is in the folder containing `main.cc`. If needed, type `cd `, followed by your project folder path in quotation marks, and press Enter.
+
+Run each command separately and press **Enter** after it.
 
 ### Windows
 
@@ -118,7 +125,7 @@ Wait for compilation to finish without errors. Then run:
 
 ## 5. Record the Time
 
-- Wait for **Render time** and **Done**.
+- Wait for **Render time** and **Done** in the terminal.
 - Record the time in seconds.
 - Run the program **5 times in total**, one run at a time.
 - Keep the code settings the same.
